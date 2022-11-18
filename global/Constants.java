@@ -91,10 +91,8 @@ public class Constants {
 		eCut("Cut","Copy and Delete",KeyStroke.getKeyStroke('L', Event.CTRL_MASK)),
 		eCopy("Copy","Copy Selected shape",KeyStroke.getKeyStroke('C', Event.CTRL_MASK)),
 		ePaste("Paste","Paste Copied shape",KeyStroke.getKeyStroke('V', Event.CTRL_MASK)),
-		eGroup("Group","Grouping the shape",KeyStroke.getKeyStroke('G', Event.CTRL_MASK)),
-		eUnGroup("UnGroup","UnGrouping the Group of shapes",KeyStroke.getKeyStroke('H', Event.CTRL_MASK)),
 		eUndo("Undo","Undo",KeyStroke.getKeyStroke('Z', Event.CTRL_MASK)),
-		eRedo("Redo","Redo",KeyStroke.getKeyStroke('Y', Event.CTRL_MASK));
+		eRedo("Redo","Redo",KeyStroke.getKeyStroke('R', Event.CTRL_MASK));
 		private String label;
 		private String ToolTip;
 		private KeyStroke keystrock;
