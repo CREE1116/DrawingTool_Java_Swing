@@ -21,7 +21,7 @@ public class TAnchors implements Serializable{
 	private EAnchors eSelectedAnchor;
 	private EAnchors eResizeAnchor;
 	static  Toolkit tk = Toolkit.getDefaultToolkit();
-	static Image temp = tk.createImage(".."+"/Drawing_Tool_/Image/Rotate_Cursor.png");	
+	static Image temp = tk.createImage("../DrawingTool_Java_Swing/Image/Rotate_Cursor.png");	
 	static Image Rotate = temp.getScaledInstance(20, 20, java.awt.Image.SCALE_SMOOTH);
 	
 	public EAnchors getResizeAnchor() {
