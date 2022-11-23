@@ -15,13 +15,14 @@ import shapes.TRectangle;
 import shapes.TSelect;
 
 public class Constants {
+	
 	public enum ETools{
-		eRectangle(new TRectangle(),null,"Drawing Rectangle","../DrawingTool_Java_Swing/Image/Rect.png","../DrawingTool_Java_Swing/Image/Selected-Rect.png",ETransformationStyle.e2Point),
-		eOval(new TOval(),null,"Drawing Oval","../DrawingTool_Java_Swing/Image/Oval.png","../DrawingTool_Java_Swing/Image/Selected-Oval.png",ETransformationStyle.e2Point),
-		eLine(new TLine(),null,"Drawing Line","../DrawingTool_Java_Swing/Image/Line.png","../DrawingTool_Java_Swing/Image/Selected-Line.png",ETransformationStyle.e2Point),
-		ePoLygon(new TPolygon(),null,"Drawing Polygon ","../DrawingTool_Java_Swing/Image/Polygon.png","../DrawingTool_Java_Swing/Image/Selected-Polygon.png",ETransformationStyle.eNPoint),
-		eSelectTool(new TSelect(),null,"Select Tool","../DrawingTool_Java_Swing/Image/Select.png","../DrawingTool_Java_Swing/Image/Selected-Select.png",ETransformationStyle.e2Point),
-		eFillTool(null,null,"Fill color of shape","../DrawingTool_Java_Swing/Image/fiilShape.png","../DrawingTool_Java_Swing/Image/fillShape_Selected.png",null);
+		eRectangle(new TRectangle(),null,"Drawing Rectangle","Rect.png","Selected-Rect.png",ETransformationStyle.e2Point),
+		eOval(new TOval(),null,"Drawing Oval","Oval.png","Selected-Oval.png",ETransformationStyle.e2Point),
+		eLine(new TLine(),null,"Drawing Line","Line.png","Selected-Line.png",ETransformationStyle.e2Point),
+		ePoLygon(new TPolygon(),null,"Drawing Polygon ","Polygon.png","Selected-Polygon.png",ETransformationStyle.eNPoint),
+		eSelectTool(new TSelect(),null,"Select Tool","Select.png","Selected-Select.png",ETransformationStyle.e2Point),
+		eFillTool(null,null,"Fill color of shape","fiilShape.png","fillShape_Selected.png",null);
 		private TShape Tool;
 		private String label;
 		private String ToolTip;
@@ -33,9 +34,9 @@ public class Constants {
 			this.label  = label;
 			this.ToolTip = ToolTip;
 			this.eTransformationStyle = eTransformationStyle;
-			Image Temp = new ImageIcon(IconPath).getImage();
+			Image Temp = new ImageIcon(getClass().getClassLoader().getResource(IconPath)).getImage();
 			this.Icon = new ImageIcon(Temp.getScaledInstance(35,35,Image.SCALE_SMOOTH));
-			Temp = new ImageIcon(SeletedIconPath).getImage();
+			Temp = new ImageIcon(getClass().getClassLoader().getResource(SeletedIconPath)).getImage();
 			this.SelectedIcon = new ImageIcon(Temp.getScaledInstance(38,38,Image.SCALE_SMOOTH));
 		}
 	

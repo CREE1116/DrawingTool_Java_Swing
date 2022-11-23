@@ -50,9 +50,9 @@ public class ToolBar extends JToolBar {
 			this.add(drawingTool);
 			buttonGroup.add(drawingTool);
 		}
-		Image Temp = new ImageIcon("../DrawingTool_Java_Swing/Image/ColorChooser.png").getImage();
+		Image Temp = new ImageIcon(getClass().getClassLoader().getResource("ColorChooser.png")).getImage();
 		ImageIcon Icon = new ImageIcon(Temp.getScaledInstance(35,35,Image.SCALE_SMOOTH));
-		Temp = new ImageIcon("../DrawingTool_Java_Swing/Image/Pressed-ColorChooser.png").getImage();
+		Temp = new ImageIcon(getClass().getClassLoader().getResource("Pressed-ColorChooser.png")).getImage();
 		ImageIcon SelectedIcon = new ImageIcon(Temp.getScaledInstance(35,35,Image.SCALE_SMOOTH));
 		
 		JButton ColorChooser = new JButton("Color");
